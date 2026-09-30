@@ -3,7 +3,7 @@ import { HandleInertiaRequests as Middleware } from "bun-jcc/Inertia/HandleInert
 import { config } from "../../../config";
 
 export class HandleInertiaRequests extends Middleware {
-  protected override ssr: boolean = false;
+  protected override ssr: boolean = true;
 
   override async share(request: AppRequest) {
     const user = await request.user();

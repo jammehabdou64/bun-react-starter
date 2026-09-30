@@ -33,3 +33,5 @@ public/build
 .idea
 .DS_Store
 .tinker_history
+build
+bootstrap/ssr

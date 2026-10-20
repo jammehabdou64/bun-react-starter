@@ -1,6 +1,7 @@
 import { app } from "./app";
 import { auth } from "./auth";
 import { cache } from "./cache";
+import { cors } from "./cors";
 import { database } from "./database";
 import { filesystems } from "./filesystems";
 import { hashing } from "./hashing";
@@ -13,6 +14,7 @@ export const config = {
   app,
   auth,
   cache,
+  cors,
   database,
   filesystems,
   hashing,

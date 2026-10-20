@@ -12,7 +12,19 @@ export const database = {
     |
     */
 
-  default: env("DB_CONNECTION", "mysql"),
+  default: env("DB_CONNECTION", "sqlite"),
+
+  /*
+    |--------------------------------------------------------------------------
+    | Query Log
+    |--------------------------------------------------------------------------
+    |
+    | When true, every SQL statement is logged with bindings and duration,
+    | for example: select * from "users" [1] 2.15ms. Defaults to APP_DEBUG.
+    |
+    */
+
+  log_queries: env("DB_LOG_QUERIES", env("APP_DEBUG", false)),
 
   connections: {
     mysql: {
@@ -35,7 +47,7 @@ export const database = {
 
     sqlite: {
       driver: "sqlite",
-      database: env("DB_DATABASE", "jcc"),
+      database: env("DB_DATABASE", "database/database.sqlite"),
     },
   },
 

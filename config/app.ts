@@ -52,6 +52,17 @@ export const app = {
 
   /*
     |--------------------------------------------------------------------------
+    | Faker Locale
+    |--------------------------------------------------------------------------
+    |
+    | Locale used by the global fake() helper and model factories. Values match
+    | @faker-js/faker locale codes (for example "en", "fr", "de").
+    |
+    */
+  faker_locale: env("APP_FAKER_LOCALE", "en"),
+
+  /*
+    |--------------------------------------------------------------------------
     | Application Key
     |--------------------------------------------------------------------------
     |
@@ -62,4 +73,7 @@ export const app = {
     */
 
   key: env("APP_KEY"),
+
+  port: env("PORT", 8000),
+  hostname: env("HOSTNAME", "127.0.0.1"),
 };

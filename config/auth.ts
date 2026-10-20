@@ -1,5 +1,5 @@
 import { env } from "javel-jcc/helpers";
-import { User } from "../app/Models/User";
+import { User } from "@Models/User";
 
 export const auth = {
   /*
@@ -21,6 +21,11 @@ export const auth = {
       driver: "session",
       provider: "users",
     },
+
+    sanctum: {
+      driver: "sanctum",
+      provider: "users",
+    },
   },
 
   providers: {
@@ -36,5 +41,17 @@ export const auth = {
       table: "password_reset_tokens",
       expire: 60,
     },
+  },
+
+  verification: {
+    expire: 60,
+  },
+
+  /*
+    | Minutes until an API token expires. null keeps the token until it is
+    | deleted. createToken() can pass its own expiry instead.
+    */
+  tokens: {
+    expiration: null as number | null,
   },
 };

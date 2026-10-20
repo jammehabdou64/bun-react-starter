@@ -4,8 +4,9 @@ import {
   EncryptCookies,
   StartSession,
   VerifyCsrfToken,
+  LogRequest,
 } from "javel-jcc";
-import { HandleInertiaRequests } from "../app/Http/Middleware/HandleInertiaRequests";
+import { HandleInertiaRequests } from "app/Http/Middleware/HandleInertiaRequests";
 import { config } from "../config";
 import { providers } from "./providers";
 
@@ -15,6 +16,9 @@ await app
   .withConfig(config)
   .withMiddleware((middleware) => {
     middleware.alias();
+    middleware.global([LogRequest]);
+
+    //
     middleware.web([
       HandleInertiaRequests,
       VerifyCsrfToken,

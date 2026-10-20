@@ -1,4 +1,4 @@
-import { Route } from "bun-jcc";
+import { Route } from "javel-jcc";
 import { AuthenticatedSessionController } from "@Controllers/AuthenticatedSessionController";
 import { DashboardController } from "@Controllers/DashboardController";
 import { EmailVerificationNotificationController } from "@Controllers/EmailVerificationNotificationController";

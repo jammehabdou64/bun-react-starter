@@ -1,5 +1,5 @@
-import { Authenticatable } from "bun-jcc/Auth/Authenticatable";
-import { Hash } from "bun-jcc";
+import { Authenticatable } from "javel-jcc/Auth/Authenticatable";
+import { Hash } from "javel-jcc";
 
 export class User extends Authenticatable {
   static table = "users";

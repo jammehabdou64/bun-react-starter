@@ -1,4 +1,4 @@
-import { Action, Auth, Controller, Inject, Inertia } from "bun-jcc";
+import { Action, Auth, Controller, Inject, Inertia } from "javel-jcc";
 
 @Inject()
 export class EmailVerificationPromptController extends Controller {

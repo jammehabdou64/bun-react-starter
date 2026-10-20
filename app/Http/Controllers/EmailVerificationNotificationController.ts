@@ -1,4 +1,4 @@
-import { Action, Auth, Controller, Inject } from "bun-jcc";
+import { Action, Auth, Controller, Inject } from "javel-jcc";
 
 @Inject()
 export class EmailVerificationNotificationController extends Controller {
@@ -10,7 +10,10 @@ export class EmailVerificationNotificationController extends Controller {
     }
     return response()
       .back("/email/verify")
-      .with("status", "A fresh verification link has been sent. The log mailer writes it to the server log.")
+      .with(
+        "status",
+        "A fresh verification link has been sent. The log mailer writes it to the server log.",
+      )
       .toResponse();
   }
 }

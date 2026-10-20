@@ -1,4 +1,4 @@
-import { Auth, FormRequest } from "bun-jcc";
+import { Auth, FormRequest } from "javel-jcc";
 
 export class ProfileUpdateRequest extends FormRequest {
   override authorize(): boolean {

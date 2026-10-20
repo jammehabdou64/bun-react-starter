@@ -1,4 +1,4 @@
-import { env } from "bun-jcc/helpers";
+import { env } from "javel-jcc/helpers";
 import { app } from "./bootstrap/app";
 
 const port = Number(env("PORT", 8000));

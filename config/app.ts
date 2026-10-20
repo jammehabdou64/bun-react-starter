@@ -1,4 +1,4 @@
-import { env } from "bun-jcc/helpers";
+import { env } from "javel-jcc/helpers";
 
 export const app = {
   /*

@@ -1,4 +1,4 @@
-import { FormRequest } from "bun-jcc";
+import { FormRequest } from "javel-jcc";
 
 export class ForgotPasswordRequest extends FormRequest {
   override authorize(): boolean {

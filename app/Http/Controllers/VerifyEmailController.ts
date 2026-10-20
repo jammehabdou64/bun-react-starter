@@ -1,4 +1,4 @@
-import { Action, Auth, Controller, EmailVerification, Inject } from "bun-jcc";
+import { Action, Auth, Controller, EmailVerification, Inject } from "javel-jcc";
 
 @Inject()
 export class VerifyEmailController extends Controller {
@@ -7,8 +7,14 @@ export class VerifyEmailController extends Controller {
     const current = request();
     const user = await Auth.user(current);
     if (!user || !(await EmailVerification.verify(current, user))) {
-      return response().redirect("/email/verify").with("status", "The verification link is invalid.").toResponse();
+      return response()
+        .redirect("/email/verify")
+        .with("status", "The verification link is invalid.")
+        .toResponse();
     }
-    return response().redirect("/dashboard").with("status", "Email verified.").toResponse();
+    return response()
+      .redirect("/dashboard")
+      .with("status", "Email verified.")
+      .toResponse();
   }
 }

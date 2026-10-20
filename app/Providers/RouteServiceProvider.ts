@@ -1,14 +1,17 @@
-import { ServiceProvider } from "bun-jcc";
-import { UrlGenerator } from "bun-jcc/Routing/UrlGenerator";
-import { setRouteRouter } from "bun-jcc/Support/Facades/Route";
-import { setUrlGenerator } from "bun-jcc/Support/Facades/URL";
+import { ServiceProvider } from "javel-jcc";
+import { UrlGenerator } from "javel-jcc/Routing/UrlGenerator";
+import { setRouteRouter } from "javel-jcc/Support/Facades/Route";
+import { setUrlGenerator } from "javel-jcc/Support/Facades/URL";
 
 export class RouteServiceProvider extends ServiceProvider {
   override async register(): Promise<void> {
     const router = this.app.router();
     setRouteRouter(router);
     setUrlGenerator(
-      new UrlGenerator(router, String(this.app.config("app.url", "http://localhost"))),
+      new UrlGenerator(
+        router,
+        String(this.app.config("app.url", "http://localhost")),
+      ),
     );
   }
 

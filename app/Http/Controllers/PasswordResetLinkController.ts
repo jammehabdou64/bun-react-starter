@@ -1,4 +1,4 @@
-import { Action, Controller, Inject, Inertia, Password } from "bun-jcc";
+import { Action, Controller, Inject, Inertia, Password } from "javel-jcc";
 import { ForgotPasswordRequest } from "../Requests/ForgotPasswordRequest";
 
 @Inject()
@@ -15,7 +15,10 @@ export class PasswordResetLinkController extends Controller {
     if (status === "passwords.sent") {
       return response()
         .back("/forgot-password")
-        .with("status", "We have emailed your password reset link. The log mailer writes it to the server log.")
+        .with(
+          "status",
+          "We have emailed your password reset link. The log mailer writes it to the server log.",
+        )
         .toResponse();
     }
     return response()

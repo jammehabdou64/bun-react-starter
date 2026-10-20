@@ -1,4 +1,4 @@
-import { ServiceProvider } from "bun-jcc";
+import { ServiceProvider } from "javel-jcc";
 
 export class AppServiceProvider extends ServiceProvider {
   override async register(): Promise<void> {}

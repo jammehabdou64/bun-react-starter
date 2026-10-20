@@ -1,4 +1,4 @@
-import { Migration, Schema } from "bun-jcc";
+import { Migration, Schema } from "javel-jcc";
 
 export default class CreateUsersTable extends Migration {
   async up(): Promise<void> {

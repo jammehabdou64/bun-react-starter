@@ -1,4 +1,4 @@
-import { Action, Auth, Controller, Hash, Inject, Inertia } from "bun-jcc";
+import { Action, Auth, Controller, Hash, Inject, Inertia } from "javel-jcc";
 import { DeleteAccountRequest } from "../Requests/DeleteAccountRequest";
 import { PasswordUpdateRequest } from "../Requests/PasswordUpdateRequest";
 import { ProfileUpdateRequest } from "../Requests/ProfileUpdateRequest";
@@ -32,7 +32,10 @@ export class ProfileController extends Controller {
         .with("status", "Profile updated. Verify the new email address.")
         .toResponse();
     }
-    return response().back("/profile").with("status", "Profile updated.").toResponse();
+    return response()
+      .back("/profile")
+      .with("status", "Profile updated.")
+      .toResponse();
   }
 
   @Action()
@@ -49,7 +52,10 @@ export class ProfileController extends Controller {
     }
     user.setAuthPassword(await Hash.make(next));
     await user.save();
-    return response().back("/profile").with("status", "Password updated.").toResponse();
+    return response()
+      .back("/profile")
+      .with("status", "Password updated.")
+      .toResponse();
   }
 
   @Action()

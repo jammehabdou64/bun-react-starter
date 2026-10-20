@@ -4,7 +4,7 @@ import {
   EncryptCookies,
   StartSession,
   VerifyCsrfToken,
-} from "bun-jcc";
+} from "javel-jcc";
 import { HandleInertiaRequests } from "../app/Http/Middleware/HandleInertiaRequests";
 import { config } from "../config";
 import { providers } from "./providers";

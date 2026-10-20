@@ -1,4 +1,4 @@
-import { Action, Controller, Inject, Inertia, Password } from "bun-jcc";
+import { Action, Controller, Inject, Inertia, Password } from "javel-jcc";
 import { ResetPasswordRequest } from "../Requests/ResetPasswordRequest";
 
 @Inject()
@@ -25,6 +25,9 @@ export class NewPasswordController extends Controller {
         .withErrors({ email: "This password reset token is invalid." })
         .toResponse();
     }
-    return response().redirect("/login").with("status", "Your password has been reset.").toResponse();
+    return response()
+      .redirect("/login")
+      .with("status", "Your password has been reset.")
+      .toResponse();
   }
 }

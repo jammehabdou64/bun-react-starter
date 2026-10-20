@@ -1,5 +1,5 @@
-import type { AppRequest } from "bun-jcc/Http/Request/Request";
-import { HandleInertiaRequests as Middleware } from "bun-jcc/Inertia/HandleInertiaRequests";
+import type { AppRequest } from "javel-jcc/Http/Request/Request";
+import { HandleInertiaRequests as Middleware } from "javel-jcc/Inertia/HandleInertiaRequests";
 import { config } from "../../../config";
 
 export class HandleInertiaRequests extends Middleware {

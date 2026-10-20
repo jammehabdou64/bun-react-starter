@@ -1,4 +1,4 @@
-import { Action, Controller, Inject, Inertia } from "bun-jcc";
+import { Action, Controller, Inject, Inertia } from "javel-jcc";
 
 @Inject()
 export class DashboardController extends Controller {

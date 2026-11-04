@@ -5,8 +5,8 @@ import {
   StartSession,
   VerifyCsrfToken,
   LogRequest,
+  HandleInertiaRequests,
 } from "javel-jcc";
-import { HandleInertiaRequests } from "app/Http/Middleware/HandleInertiaRequests";
 import { config } from "../config";
 import { providers } from "./providers";
 

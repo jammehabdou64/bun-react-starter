@@ -21,7 +21,7 @@
     "@tailwindcss/vite": "^4.3.4",
     "@vitejs/plugin-react": "^6.2.1",
     "axios": "^1.21.0",
-    "javel-jcc": "0.0.3",
+    "javel-jcc": "0.0.4",
     "laravel-vite-plugin": "^3.2.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

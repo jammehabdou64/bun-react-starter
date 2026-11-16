@@ -1,9 +1,8 @@
-import { DatabaseServiceProvider } from "javel-jcc";
-import { AppServiceProvider } from "../app/Providers/AppServiceProvider";
-import { RouteServiceProvider } from "../app/Providers/RouteServiceProvider";
+import { AppServiceProvider } from "@Providers/AppServiceProvider";
+import { RouteServiceProvider } from "@Providers/RouteServiceProvider";
 
 export const providers = [
-  DatabaseServiceProvider,
+  //
   AppServiceProvider,
   RouteServiceProvider,
 ];
